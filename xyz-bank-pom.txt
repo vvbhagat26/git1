@@ -1,0 +1,72 @@
+baseUrl :http://www.way2automation.com/angularjs-protractor/banking/#/login
+
+Page Object project 
+
+Project name: xyz-bank
+Group-Id : com.bank
+
+main package.
+create all packages and class that you created in previous project
+
+In Pages package
+1.HomePage
+2.CustomerLoginPage
+3.BankManagerLoginPage
+4.AddCustomerPage
+5.OpenAccountPage
+6.CustomersPage
+7.AccountPage - store Transaction, deposit and withdraw.
+
+test package.
+create all packages and class that you created in previous project 
+
+In Testsuite package
+create
+1.BankTest
+Inside This create testmethods
+1.bankManagerShouldAddCustomerSuccessfully.
+    click On "Bank Manager Login" Tab
+	click On "Add Customer" Tab
+	enter FirstName
+	enter LastName
+	enter PostCode
+	click On "Add Customer" Button
+	popup display
+	verify message "Customer added successfully"
+	click on "ok" button on popup.
+	
+2. bankManagerShouldOpenAccountSuccessfully.
+	click On "Bank Manager Login" Tab
+	click On "Open Account" Tab
+	Search customer that created in first test
+	Select currency "Pound"
+	click on "process" button
+	popup displayed
+	verify message "Account created successfully"
+	click on "ok" button on popup.
+3. customerShouldLoginAndLogoutSuceessfully.
+	click on "Customer Login" Tab
+	search customer that you created.
+	click on "Login" Button
+	verify "Logout" Tab displayed.
+	click on "Logout"
+	verify "Your Name" text displayed.
+4. customerShouldDepositMoneySuccessfully.
+	click on "Customer Login" Tab
+	search customer that you created.
+	click on "Login" Button
+	click on "Deposit" Tab
+	Enter amount 100
+	click on "Deposit" Button
+	verify message "Deposit Successful"
+5. customerShouldWithdrawMoneySuccessfully
+	click on "Customer Login" Tab
+	search customer that you created.
+	click on "Login" Button
+	click on "Withdrawl" Tab
+	Enter amount 50
+	click on "Withdraw" Button
+	verify message "Transaction Successful"
+
+
+
